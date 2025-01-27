@@ -1,0 +1,21 @@
+{{% extends 'maintemplate.html' %}
+{% block title %}
+    Запись {{ note.title }}
+{% endblock %}
+
+{% block header %}
+    <div class="title">
+        <h1>Подробное описание для {{ note.title }}</h1>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <h1>{{ note.title }}</h1>
+    <h3>{{ note.tags }}</h3>
+    <h2>
+        <span>
+            {{ note.content }}
+        </span>
+    </h2>
+    <h3>{{ note.created_at }}</h3>
+{% endblock %}

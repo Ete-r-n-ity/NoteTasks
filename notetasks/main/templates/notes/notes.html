@@ -1,0 +1,22 @@
+{% extends 'maintemplate.html' %}
+
+{% block title %}
+    Главная страница
+{% endblock %}
+
+{% block header %}
+    <div class="title">
+        <h1>Главная страница</h1>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <h1>Записи <3</h1>
+    <ul>
+        {% for obj in object_list %}
+        <li>
+            <a> {{ obj.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

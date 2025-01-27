@@ -1,0 +1,21 @@
+{{% extends 'maintemplate.html' %}
+{% block title %}
+    Задача {{ task.title }}
+{% endblock %}
+
+{% block header %}
+    <div class="title">
+        <h1>Подробное описание для {{ task.title }}</h1>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <h1>{{ task.title }}</h1>
+    <h3>{{ task.tags }}</h3>
+    <h2>
+        <span>
+            {{ task.content }}
+        </span>
+    </h2>
+    <h3>{{ task.created_at }}</h3>
+{% endblock %}
